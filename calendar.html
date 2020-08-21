@@ -18,19 +18,37 @@
 
 </head>
 <body>
-<div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
-    <div class="card">
-        <h3 class="card-header" id="monthAndYear"></h3>
-        <table class="table table-bordered table-responsive-sm" id="calendar">
-            <thead>
-            <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
+<div class="calendar" id="calendar">
+    <div class="calendar-btn month-btn" onclick="$('#months').toggle('fast')">
+        <span id="curMonth"></span>
+        <div id="months" class="months dropdown"></div>
+    </div>
+
+    <div class="calendar-btn year-btn" onclick="$('#years').toggle('fast')">
+        <span id="curYear"></span>
+        <div id="years" class="years dropdown"></div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="calendar-dates">
+        <div class="days">
+            <div class="day label">SUN</div>
+            <div class="day label">MON</div>
+            <div class="day label">TUE</div>
+            <div class="day label">WED</div>
+            <div class="day label">THUR</div>
+            <div class="day label">FRI</div>
+            <div class="day label">SAT</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div id="calendarDays" class="days">
+        </div>
+    </div>
+</div>
+
             </tr>
             </thead>
 
